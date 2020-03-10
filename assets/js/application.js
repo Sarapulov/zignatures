@@ -171,8 +171,8 @@ function escapeRegex(value) { // remove regex-like characters
     return value.replace( /[\-\[\]{}()*+?.,\\\^$|#\s]/g, "\\$&" );
 }
 function logError(msg, data){ // log error message to the console
-    console.log("[" + new Date().toUTCString() + "] ERROR: " + msg);
-    if (data !== undefined) console.log(data);
+    c("[" + new Date().toUTCString() + "] ERROR: " + msg);
+    if (data !== undefined) console.error(data);
 }
 
 ///////// DEFLECTION MODAL /////////

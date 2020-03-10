@@ -1,16 +1,16 @@
 {
   "name": "Zignatures",
   "author": {
-    "name": "Zendesk Labs",
-    "email": "zendesklabs@zendesk.com",
+    "name": "Andrey",
+    "email": "andrey@sarapulov.com",
     "url": "https://github.com/zendesklabs/zignatures"
   },
   "defaultLocale": "en",
   "private": false,
-  "version": "1.5",
+  "version": "1.6",
   "frameworkVersion": "2.0",
   "singleInstall": true,
-  "termsConditionsURL": "https://sarapulov.zendesk.com/app_market/assets/zendesk_labs_license-0537093997011144fd56f1e50bfd89288287a6d802b14e52c998ccc82c46faa0.pdf",
+  "termsConditionsURL": "",
   "gaID": "UA-122221692-1",
   "location": {
     "support": {
