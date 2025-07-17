@@ -12,8 +12,18 @@
     PARAMS.firstLoad = false;
     PARAMS.appendMethod = 'comment.appendHtml';
     PARAMS.noSignature = getBoolean(localStorage.getItem('noSignature'));
+    PARAMS.isDark = false;
 
-    getUser();
+    client.get('colorScheme').then(function(data) {
+      PARAMS.isDark = data.colorScheme == "dark"; 
+      PARAMS.isDark && setDarkTheme();
+      getUser();
+    })
+
+  }
+  function setDarkTheme() { // mark the app dark
+    document.documentElement.style.backgroundColor = 'rgb(21, 26, 30)';
+    document.body.style.backgroundColor = 'rgb(21, 26, 30)';
   }
   function getUser() { // get current user with locale
     client.get('currentUser').then(function(data) {
@@ -75,9 +85,9 @@
       });
     });
 
-    client.on('comment.type.changed', function(data) {
-      PARAMS.isSignable = (data === 'publicReply') || (data === 'internalNote' && PARAMS.metadata.settings.sign_private_comment);
-      PARAMS.canBeSignable = (data === 'publicReply') || (data === 'internalNote' && PARAMS.metadata.settings.sign_private_comment);
+    client.on('ticket.editor.targetChannel.changed', function(data) {
+      PARAMS.isSignable = (data.name === 'web') || (data.name === 'internal' && PARAMS.metadata.settings.sign_private_comment);
+      PARAMS.canBeSignable = (data.name === 'web') || (data.name === 'internal' && PARAMS.metadata.settings.sign_private_comment);
       showApp();
     });
 

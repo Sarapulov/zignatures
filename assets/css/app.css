@@ -5,17 +5,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow-y: hidden;
 }
 .alert {
   display: block;
-  width: 320px;
+  /* width: 320px; */
   -webkit-transition: box-shadow .1s ease-in-out;
   transition: box-shadow .1s ease-in-out;
-  /*
-    border: 0;
-    border-radius: 2px;
-    background-color: #30aabc;
-  */
   border: 1px solid #d8dcde;
   border-radius: 4px;
   padding: 1em;
@@ -29,7 +25,6 @@ body {
 }
 .alert-positive {
   /* background-color: #16ba52; */
-
   border-color: #aecfc2;
   background-color: #edf8f4;
   color: #186146;
