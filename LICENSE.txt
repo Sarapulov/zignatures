@@ -9,9 +9,7 @@ Restrictions
 You may not:
 
 Reproduce, copy, modify, or create derivative works based on the App;
-
 Distribute, sublicense, lease, sell, or otherwise transfer the App or any part of it to any third party;
-
 Use the App in any way that violates applicable laws or third-party rights.
 
 Ownership
