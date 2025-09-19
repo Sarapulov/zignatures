@@ -189,7 +189,7 @@ function logError(msg, data){ // log error message to the console
 
 function handleModal() { // attach deflection message and resize the modal
   $('#zignature').append('<div class="deflection_msg">' + PARAMS.i18n.deflection_message +'</div>');
-  client.invoke('resize', { width: '40vw', height: '100%' });
+  client.invoke('resize', { width: '40vw', height: '200px' });
 }
 function showDeflectionModal(){ // fire off deflection modal
   client.invoke('instances.create', {
